@@ -8,6 +8,7 @@ const getApi = async (onSuccess, onError) => {
   await axios.get(`${API_URL}`).then(
     (response) => {
       onSuccess(response);
+      console.log(response);
     },
     (error) => onError(error)
   );

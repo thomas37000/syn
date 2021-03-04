@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <a
           className="App-link"
-          href="#"
+          href="http://localhost:3000/"
           target="_blank"
           rel="noopener noreferrer"
         >

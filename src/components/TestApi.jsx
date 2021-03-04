@@ -1,14 +1,27 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import getApi from '../api/api';
+import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
+import axios from 'axios';
+import getApi from "../api/api";
+import Card from "./common/Card";
 
+const TestApi = () => {
+  const [posts, setPosts] = useState([]);
 
-const TestApi = props => {
-    return (
-        <div>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad dicta vitae, eligendi voluptatibus quidem velit voluptas earum fuga error totam sit architecto est assumenda optio a doloremque exercitationem, nobis accusamus.
-        </div>
-    );
+  useEffect(() => {
+    axios.get(`${getApi}`).then((res) => {
+      console.log(res);
+      setPosts(res);
+    });
+  }, []);
+
+  return (
+    <div>
+      {posts.map((post) => (
+        <Card key={post.idpost} post={post} />
+      ))}
+      <Card />
+    </div>
+  );
 };
 
 /* TestApi.propTypes = {
