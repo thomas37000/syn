@@ -7,7 +7,8 @@ export default function Card({ post }) {
   return (
     <Link to="/">
       <div className="divCard">
-        <div className="Card">
+        lorem
+        <div className="card">
           <div>
             <img
               className="logo"

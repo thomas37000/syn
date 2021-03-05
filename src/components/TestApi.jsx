@@ -6,6 +6,7 @@ import './TestApi.css';
 
 export default function TestApiBis() {
   const [posts, setPosts] = useState([]);
+
   const API_URL = 'https://slideyour.net/api.php';
   const params = {
     s: 'thomas',
