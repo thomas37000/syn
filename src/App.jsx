@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.css';
 import TestApi from './components/TestApi';
+import './App.css';
 
 function App() {
   return (
