@@ -1,5 +1,4 @@
 import React from 'react';
-import TestApi from './components/TestApi';
 import Grid from './components/Grid';
 import './App.css';
 
@@ -16,7 +15,6 @@ function App() {
           liveWall
         </a>
       </header>
-      <TestApi />
       <Grid />
     </div>
   );

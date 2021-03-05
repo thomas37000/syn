@@ -1,37 +1,36 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './Card.css';
 
 export default function Card({ post }) {
   return (
-    <Link to="/">
-      <div className="divCard">
-        lorem
-        <div className="card">
-          <div>
-            <img
-              className="logo"
-              src={post.picture}
-              alt={`logo ${post.firstname}`}
-            />
-          </div>
-          <div className="a">
-            <h3 className="b">{post.firstname}</h3>
-            <h3 className="c">{post.lastname}</h3>
-          </div>
-        </div>
+    <div className="item">
+      <img className="cardImg" src={post.avatar_url} alt={post.name} />
+      <h2 className="network">{post.network}</h2>
+      <div className="cardBody">
+        <div>{post.pub_date}</div>
+        <h3>{post.content}</h3>
+        <h5 className="card-title">{post.title}</h5>
+        <p className="card-text">{post.text}</p>
+        <a href={post.pub_url} className="socialLink">
+          link
+        </a>
+        <h3 className="hashtag">{post.search}</h3>
       </div>
-    </Link>
+    </div>
   );
 }
 
 Card.propTypes = {
   post: PropTypes.shape({
-    firstname: PropTypes.string.isRequired,
-    lastname: PropTypes.string.isRequired,
-    linkedin: PropTypes.string,
-    picture: PropTypes.string,
-    iduser: PropTypes.number,
+    avatar_url: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    network: PropTypes.string.isRequired,
+    pub_date: PropTypes.string.isRequired,
+    pub_url: PropTypes.string.isRequired,
+    search: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
   }).isRequired,
 };
