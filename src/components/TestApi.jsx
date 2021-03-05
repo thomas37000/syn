@@ -6,10 +6,10 @@ import axios from 'axios';
 import Card from './common/Card';
 
 const TestApi = () => {
+  // eslint-disable-next-line no-unused-vars
   const [posts, setPosts] = useState([]);
 
-  const CORS = 'https://cors-anywhere.herokuapp.com/';
-  const API_URL = 'http://slideyour.net/api.php';
+  const API_URL = 'https://slideyour.net/api.php';
   const params = {
     s: 'thomas',
     t: '4a84dc9cba1b7d45b367b86a3fd57cdd',
@@ -17,7 +17,7 @@ const TestApi = () => {
   };
 
   useEffect(() => {
-    axios.get(` ${CORS} ${API_URL}`, { params }).then((res) => {
+    axios.get(`${API_URL}`, { params }).then((res) => {
       console.log('api', res);
       setPosts(res);
     });
@@ -25,9 +25,9 @@ const TestApi = () => {
 
   return (
     <div>
-      {posts.map((post) => (
+      {/*  {posts.map((post) => (
         <Card key={post.idpost} post={post} />
-      ))}
+      ))} */}
       <Card />
     </div>
   );
