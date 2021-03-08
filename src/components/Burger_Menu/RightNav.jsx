@@ -24,7 +24,7 @@ const Slideburger = styled.ul`
   }
 
   li:hover {
-    background: #e15845;
+    background: #ffcc00;
   }
 
   .logoBurger {
@@ -64,16 +64,10 @@ const RightNav = ({ open }) => {
   return (
     <Slideburger open={open}>
       <li>
-        <Link to="/diversite/">Toute l&apos;année</Link>
+        <Link to="/">Accueil</Link>
       </li>
       <li>
-        <Link to="/voyage/">Voyage à Nantes</Link>
-      </li>
-      <li>
-        <Link to="/animations/">Animations estivales</Link>
-      </li>
-      <li>
-        <Link to="/contact">Contact</Link>
+        <Link to="/admin">Admin</Link>
       </li>
     </Slideburger>
   );

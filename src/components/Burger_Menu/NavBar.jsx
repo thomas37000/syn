@@ -8,15 +8,15 @@ import Burger from './Burger';
 const Nav = styled.nav`
   width: 100%;
   height: 7vh;
-  border-bottom: 2px solid #f5f5f5;
+  background: #f7f7f7;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   .logo {
     display: flex;
-    width: 55px;
-    height: 55px;
+    width: 35px;
+    height: 35px;
     margin-left: 30px;
     border-radius: 50%;
   }
@@ -34,7 +34,6 @@ const Navbar = () => {
       <Link to="/">
         <img className="logo" src={logo} alt="" />
       </Link>
-      <Link to="/admin" />
       <Burger />
     </Nav>
   );
