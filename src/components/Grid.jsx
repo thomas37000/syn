@@ -12,26 +12,16 @@ const Grid = () => {
   const params = {
     s: 'thomas',
     t: '4a84dc9cba1b7d45b367b86a3fd57cdd',
-    network: 'twitter',
+    network: '',
     object: 'post',
     order: 'ASC',
     order_by: 'pub_date',
     per_page: 12,
   };
 
-  const paramsUser = {
-    s: 'thomas',
-    t: '4a84dc9cba1b7d45b367b86a3fd57cdd',
-    network: 'facebook',
-    object: 'user',
-    order: 'ASC',
-    order_by: 'username',
-    per_page: 10,
-  };
-
   useEffect(() => {
     axios
-      .get(`${API_URL}`, { params } || { paramsUser })
+      .get(`${API_URL}`, { params })
       .then((res) => res.data)
       .then((data) => {
         setPosts(data);

@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid from './components/Grid';
+import Routter from './components/router/Router';
 import './App.css';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
           liveWall
         </a>
       </header>
-      <Grid />
+      <Routter />
     </div>
   );
 }
