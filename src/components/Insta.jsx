@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Card from './common/Card';
 
-const Grid = () => {
-  const [posts, setPosts] = useState([]);
+const InstaGrid = () => {
+  const [instagrams, setInstagrams] = useState([]);
   // eslint-disable-next-line no-unused-vars
   const [users, setUsers] = useState([]);
 
@@ -12,7 +12,7 @@ const Grid = () => {
   const params = {
     s: 'thomas',
     t: '4a84dc9cba1b7d45b367b86a3fd57cdd',
-    network: '',
+    network: 'instagram',
     object: 'post',
     order: 'ASC',
     order_by: 'pub_date',
@@ -24,9 +24,9 @@ const Grid = () => {
       .get(`${API_URL}`, { params })
       .then((res) => res.data)
       .then((data) => {
-        setPosts(data);
+        setInstagrams(data);
         setUsers(data.user);
-        console.log('twitter posts', data);
+        console.log('insta posts', data);
       })
       .catch((error) => {
         let message;
@@ -43,12 +43,12 @@ const Grid = () => {
   return (
     <>
       <div className="galerie">
-        {posts.map((post) => (
-          <Card key={post.pub_id} post={post} session={post.session_id} />
+        {instagrams.map((insta) => (
+          <Card key={insta.pub_id} post={insta} session={insta.session_id} />
         ))}
       </div>
     </>
   );
 };
 
-export default Grid;
+export default InstaGrid;

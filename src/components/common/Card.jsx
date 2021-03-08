@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Card.css';
@@ -5,7 +6,7 @@ import './Card.css';
 export default function Card({ post }) {
   return (
     <div className="item">
-      <img className="cardImg" src={post.avatar_url} alt={post.name} />
+      <img className="cardImg" src={post.user.avatar_url} alt={post.name} />
       <h2 className="network">{post.network}</h2>
       <div className="cardBody">
         <div>{post.pub_date}</div>

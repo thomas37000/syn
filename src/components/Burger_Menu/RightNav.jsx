@@ -39,7 +39,7 @@ const Slideburger = styled.ul`
     top: 0;
     right: 0;
     height: 50vh;
-    width: 85%;
+    width: 80%;
     padding-top: 5.5rem;
     transition: transform 0.3s ease-in-out;
 
@@ -68,6 +68,9 @@ const RightNav = ({ open }) => {
       </li>
       <li>
         <Link to="/admin">Admin</Link>
+      </li>
+      <li>
+        <Link to="/instagram">Instagram</Link>
       </li>
     </Slideburger>
   );
