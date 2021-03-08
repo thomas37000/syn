@@ -11,7 +11,7 @@
   margin: 70px auto 0;
 }
 
-.item {
+.card{
   width: 300px;
   height: 350px;
   margin: 10px;
@@ -22,6 +22,12 @@
     #004d7a,
     #008793
   );
+}
+
+.headerCard {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .cardBody {
@@ -37,13 +43,23 @@
   text-decoration: none;
 }
 
-.hashtag {
+.hashtag, .instaName {
   color: yellowgreen;
 }
 
-.item img {
+.cardImg {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   margin-top: 1rem;
 }
+
+
+.card:hover {
+  background-position: 100% 100%;
+  background: #48ad26;
+}
+.card:hover .hashtag {
+  color: #000;
+}
+

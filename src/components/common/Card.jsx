@@ -5,8 +5,15 @@ import './Card.css';
 
 export default function Card({ post }) {
   return (
-    <div className="item">
-      <img className="cardImg" src={post.user.avatar_url} alt={post.name} />
+    <div className="card">
+      <div className="headerCard">
+        <h3 className="instaName">{post.user.name}</h3>
+        <img
+          className="cardImg"
+          src={post.user.avatar_url}
+          alt={post.user.name}
+        />
+      </div>
       <h2 className="network">{post.network}</h2>
       <div className="cardBody">
         <div>{post.pub_date}</div>
