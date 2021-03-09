@@ -2,39 +2,29 @@
   color: lightgrey;
 }
 
-.galerie {
+/* .galerie {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   width: 80%;
   max-width: 1300px;
   margin: 70px auto 0;
-}
+} */
 
-.card{
-  width: 300px;
-  height: 350px;
-  margin: 10px;
+.card {
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
   flex-shrink: 0;
-  background-image: linear-gradient(
-    to right top,
-    #004d7a,
-    #008793
-  );
-}
-
-.headerCard {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  background: #1da1f2;
 }
 
 .cardBody {
+  width: 80vw;
   display: grid;
   justify-content: center;
   align-items: center;
-  color:#f1f1f1;
+  color: #f1f1f1;
   margin: 1rem;
 }
 
@@ -43,8 +33,26 @@
   text-decoration: none;
 }
 
-.hashtag, .name {
-  color: yellowgreen;
+.userCard {
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  color: #fff;
+  font-weight: 700;
+  margin: 1rem 0 0 1rem;
+}
+
+.footerCard {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hashtag {
+  color: #fff;
+  margin: 1rem 1rem 0 0;
 }
 
 .cardImg {
@@ -54,8 +62,7 @@
   margin-top: 1rem;
 }
 
-
-.card:hover {
+/* .card:hover {
   background-position: 100% 100%;
   background: #48ad26;
 }
@@ -66,4 +73,4 @@
 .card:hover .name {
   color: #f1f1f1;
 }
-
+ */
