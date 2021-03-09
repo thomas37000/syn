@@ -43,7 +43,7 @@
   text-decoration: none;
 }
 
-.hashtag, .instaName {
+.hashtag, .name {
   color: yellowgreen;
 }
 
@@ -61,5 +61,9 @@
 }
 .card:hover .hashtag {
   color: #000;
+}
+
+.card:hover .name {
+  color: #f1f1f1;
 }
 

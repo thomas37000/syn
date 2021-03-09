@@ -7,7 +7,7 @@ export default function Card({ post }) {
   return (
     <div className="card">
       <div className="headerCard">
-        <h3 className="instaName">{post.user.name}</h3>
+        <h3 className="name">{post.user.name}</h3>
         <img
           className="cardImg"
           src={post.user.avatar_url}

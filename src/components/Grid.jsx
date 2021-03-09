@@ -8,15 +8,16 @@ const Grid = () => {
   // eslint-disable-next-line no-unused-vars
   const [users, setUsers] = useState([]);
 
-  const API_URL = 'https://slideyour.net/api.php';
+  const API_URL = `https://slideyour.net/api.php`;
   const params = {
     s: 'thomas',
     t: '4a84dc9cba1b7d45b367b86a3fd57cdd',
-    network: '',
+    network: 'twitter',
     object: 'post',
     order: 'ASC',
     order_by: 'pub_date',
     per_page: 12,
+    session_id: 0,
   };
 
   useEffect(() => {
@@ -38,7 +39,7 @@ const Grid = () => {
           console.log(error);
         }
       });
-  }, []);
+  }, [params.session_id[0]]);
 
   return (
     <>
