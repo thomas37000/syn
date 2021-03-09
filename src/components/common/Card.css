@@ -19,7 +19,7 @@
   content: '';
   width: 100vw;
   height: 100vh;
-  background-image: url('');
+  background-image: var(--before);
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;

@@ -5,13 +5,15 @@ import PropTypes from 'prop-types';
 import './Card.css';
 
 export default function Card({ post }) {
+  const bg = `url(${post.media_url})`;
+  const bgBefore = {
+    '--before': bg,
+  };
+
   return (
     <>
       {post ? (
-        <div
-          className="cardWithImg"
-          style={{ backgroundImage: `url(${post.media_url})` }}
-        >
+        <div className="cardWithImg" style={bgBefore}>
           <div className="cardBodyWithImg">
             <div className="content">
               <p>{post.content}</p>

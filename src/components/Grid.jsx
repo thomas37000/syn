@@ -16,7 +16,7 @@ const Grid = () => {
     object: 'post',
     order: 'ASC',
     order_by: 'pub_date',
-    per_page: 1,
+    per_page: 10,
     session_id: 0,
   };
 
