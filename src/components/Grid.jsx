@@ -12,12 +12,21 @@ const Grid = () => {
   const params = {
     s: 'thomas3',
     t: '8845c9cd48230070ac72191467ac1690',
-    network: 'twitter',
     object: 'post',
+    type: 'get',
+    network: 'twitter',
+    username: '',
+    status: 1,
+    after: '',
+    before: '',
+    minid: '',
+    maxid: '',
+    item_id: '',
+    ref: 'yes',
     order: 'ASC',
     order_by: 'pub_date',
     per_page: 30,
-    session_id: 0,
+    page: 1,
   };
 
   useEffect(() => {
@@ -39,7 +48,7 @@ const Grid = () => {
           console.log(error);
         }
       });
-  }, [params.session_id[0]]);
+  }, [params.t]);
 
   return (
     <>

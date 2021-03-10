@@ -10,14 +10,21 @@ const Facebook = () => {
 
   const API_URL = 'https://slideyour.net/api.php';
   const params = {
-    s: 'thomas',
-    t: '4a84dc9cba1b7d45b367b86a3fd57cdd',
-    network: 'facebook',
+    s: 'thomas3',
+    t: '8845c9cd48230070ac72191467ac1690',
     object: 'post',
-    order: 'ASC',
+    type: 'get',
+    network: 'instagram',
+    username: '',
+    status: 1,
+    after: '',
+    before: '',
+    minid: '',
+    maxid: '',
+    item_id: '',
     order_by: 'pub_date',
-    per_page: 12,
-    session_id: 0,
+    per_page: 30,
+    page: 1,
   };
 
   useEffect(() => {
@@ -39,7 +46,7 @@ const Facebook = () => {
           console.log(error);
         }
       });
-  }, []);
+  }, [params.t]);
 
   return (
     <>
