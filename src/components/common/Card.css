@@ -1,11 +1,18 @@
-/* :root{
-  --bgWithImg: url();
-} */
+:root{
+  --bgNoImg:  #1da1f2;
+  --bgNoImgNous: #FFDD00;
+}
 
 .card {
   width: 100vw;
   height: 100vh;
-  background: #1da1f2;
+  background: var(--bgNoImg);
+}
+
+.cardNous {
+  width: 100vw;
+  height: 100vh;
+  background: var(--bgNoImgNous);
 }
 
 .cardWithImg {
