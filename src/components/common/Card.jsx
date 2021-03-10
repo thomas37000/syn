@@ -1,10 +1,12 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-curly-brace-presence */
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './Card.css';
 
 export default function Card({ post }) {
+  const [isImg, setIsImg] = useState(false);
   const bg = `url(${post.media_url})`;
   const bgBefore = {
     '--before': bg,
@@ -12,7 +14,7 @@ export default function Card({ post }) {
 
   return (
     <>
-      {post ? (
+      {isImg ? (
         <div className="cardWithImg" style={bgBefore}>
           <div className="cardBodyWithImg">
             <div className="content">
@@ -20,9 +22,13 @@ export default function Card({ post }) {
             </div>
             <div className="cardImg">
               {post ? (
-                <img className="getImg" src={post.media_url} alt={''} />
+                <div className="getImg">
+                  <img src={post.media_url} alt="" />
+                </div>
               ) : (
-                <img className="hideImg" src={post.media_url} alt={''} />
+                <div className="hideImg">
+                  <img src={post.media_url} alt="" />
+                </div>
               )}
             </div>
           </div>
@@ -57,9 +63,13 @@ export default function Card({ post }) {
             </div>
             <div className="cardImg">
               {post ? (
-                <img className="getImg" src={post.media_url} alt={''} />
+                <div className="getImg">
+                  <img src={post.media_url} alt="" />
+                </div>
               ) : (
-                <img className="hideImg" src={post.media_url} alt="Linkedin" />
+                <div className="hideImg">
+                  <img src={post.media_url} alt="" />
+                </div>
               )}
             </div>
           </div>

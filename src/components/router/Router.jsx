@@ -11,7 +11,7 @@ export default function Routter() {
         <Navbar />
         <Switch>
           <Route exact path="/" />
-          <Route path="/admin" component={Grid} />
+          <Route path="/twitter" component={Grid} />
           <Route path="/facebook" component={Facebook} />
         </Switch>
       </Router>

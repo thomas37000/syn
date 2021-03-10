@@ -1,18 +1,21 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-curly-brace-presence */
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './Card.css';
 
 export default function CardFb({ post }) {
+  const [isImg, setIsImg] = useState(false);
   const bg = `url(${post.media_url})`;
+  // eslint-disable-next-line no-unused-vars
   const bgBefore = {
     '--before': bg,
   };
 
   return (
     <>
-      {post ? (
+      {isImg ? (
         <div className="cardWithImg" style={bgBefore}>
           <div className="cardBodyWithImg">
             <div className="content">
@@ -20,9 +23,13 @@ export default function CardFb({ post }) {
             </div>
             <div className="cardImg">
               {post ? (
-                <img className="getImg" src={post.media_url} alt={''} />
+                <div className="getImg">
+                  <img src={post.media_url} alt="" />
+                </div>
               ) : (
-                <img className="hideImg" src={post.media_url} alt={''} />
+                <div className="hideImg">
+                  <img src={post.media_url} alt="" />
+                </div>
               )}
             </div>
           </div>
@@ -51,24 +58,26 @@ export default function CardFb({ post }) {
         </div>
       ) : (
         <div className="cardFb">
-          <div className="cardBody">
+          <div className="cardBodyNoImg">
             <div className="content">
               <p>{post.content}</p>
             </div>
             <div className="cardImg">
               {post ? (
-                <img className="getImg" src={post.media_url} alt={''} />
+                <div className="getImgFb">
+                  <img src={post.media_url} alt="" />
+                </div>
               ) : (
-                <img className="hideImg" src={post.media_url} alt={''} />
+                <div className="hideImg">
+                  <img src={post.media_url} alt="" />
+                </div>
               )}
             </div>
           </div>
-
           <p className="card-text">{post.text}</p>
           {/* <a href={post.pub_url} className="socialLink">
           link
         </a> */}
-
           <div className="userCard">
             <img
               className="logoUser"
