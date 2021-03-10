@@ -10,13 +10,13 @@ const Grid = () => {
 
   const API_URL = `https://slideyour.net/api.php`;
   const params = {
-    s: 'thomas2',
-    t: '414d4d57e4577ea404ff0ebdfe25c680',
+    s: 'thomas3',
+    t: '8845c9cd48230070ac72191467ac1690',
     network: 'twitter',
     object: 'post',
     order: 'ASC',
     order_by: 'pub_date',
-    per_page: 1,
+    per_page: 30,
     session_id: 0,
   };
 

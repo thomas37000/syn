@@ -1,10 +1,10 @@
 /* eslint-disable no-console */
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Card from './common/Card';
+import CardFb from './common/CardFacebook';
 
-const InstaGrid = () => {
-  const [instagrams, setInstagrams] = useState([]);
+const Facebook = () => {
+  const [facebooks, setFacebooks] = useState([]);
   // eslint-disable-next-line no-unused-vars
   const [users, setUsers] = useState([]);
 
@@ -25,9 +25,9 @@ const InstaGrid = () => {
       .get(`${API_URL}`, { params })
       .then((res) => res.data)
       .then((data) => {
-        setInstagrams(data);
+        setFacebooks(data);
         setUsers(data.user);
-        console.log('insta posts', data);
+        console.log('facebook posts', data);
       })
       .catch((error) => {
         let message;
@@ -44,12 +44,12 @@ const InstaGrid = () => {
   return (
     <>
       <div className="galerie">
-        {instagrams.map((insta) => (
-          <Card key={insta.pub_id} post={insta} session={insta.session_id} />
+        {facebooks.map((fb) => (
+          <CardFb key={fb.pub_id} post={fb} session={fb.session_id} />
         ))}
       </div>
     </>
   );
 };
 
-export default InstaGrid;
+export default Facebook;

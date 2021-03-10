@@ -67,10 +67,10 @@ const RightNav = ({ open }) => {
         <Link to="/">Accueil</Link>
       </li>
       <li>
-        <Link to="/admin">Admin</Link>
+        <Link to="/twitter">Twitter</Link>
       </li>
       <li>
-        <Link to="/instagram">Instagram</Link>
+        <Link to="/facebook">Facebook</Link>
       </li>
     </Slideburger>
   );
