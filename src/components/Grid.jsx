@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Card from './common/Card';
+import Card from './common/CardTwitter';
 
 const Grid = () => {
   const [posts, setPosts] = useState([]);

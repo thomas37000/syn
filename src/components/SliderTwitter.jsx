@@ -8,7 +8,7 @@ import {
   CarouselIndicators,
   CarouselCaption,
 } from 'reactstrap';
-import Card from '../common/Card';
+import Card from './common/CardTwitter';
 
 const SliderTwitter = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -19,8 +19,8 @@ const SliderTwitter = () => {
 
   const API_URL = `https://slideyour.net/api.php`;
   const params = {
-    s: 'thomas3',
-    t: '8845c9cd48230070ac72191467ac1690',
+    s: 'thomas4',
+    t: 'ddf1f0d7ee779ed42772231fa903a43b',
     object: 'post',
     type: 'get',
     network: 'twitter',
@@ -31,7 +31,6 @@ const SliderTwitter = () => {
     minid: '',
     maxid: '',
     item_id: '',
-    ref: 'yes',
     order: 'ASC',
     order_by: 'pub_date',
     per_page: 30,

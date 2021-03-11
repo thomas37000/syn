@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import './Card.css';
 
 export default function Card({ post }) {
-  const [isImg, setIsImg] = useState(false);
+  const [isImg, setIsImg] = useState(true);
   const bg = `url(${post.media_url})`;
   const bgBefore = {
     '--before': bg,

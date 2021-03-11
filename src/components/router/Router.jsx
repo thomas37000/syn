@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Navbar from '../Burger_Menu/NavBar';
-import SliderTwitter from '../Slider/SliderTwitter';
 import SliderFacebook from '../SliderFacebook';
-// import Grid from '../Grid';
+import SliderTwitter from '../SliderTwitter';
+import Navbar from '../Burger_Menu/NavBar';
+// import TodoList from '../TodoList';
 
 export default function Routter() {
   return (
@@ -11,9 +11,10 @@ export default function Routter() {
       <Router>
         <Navbar />
         <Switch>
-          <Route exact path="/" />
-          <Route path="/twitter" component={SliderTwitter} />
+          {/* <Route exact path="/" /> */}
+          <Route exact path="/twitter" component={SliderTwitter} />
           <Route path="/facebook" component={SliderFacebook} />
+          {/* <Route path="/todolist" component={TodoList} /> */}
         </Switch>
       </Router>
     </div>

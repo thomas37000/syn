@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import './Card.css';
 
 export default function CardFb({ post }) {
-  const [isImg, setIsImg] = useState(false);
+  const [isImg, setIsImg] = useState(true);
   const bg = `url(${post.media_url})`;
   // eslint-disable-next-line no-unused-vars
   const bgBefore = {

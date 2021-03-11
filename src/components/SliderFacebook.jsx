@@ -8,7 +8,7 @@ import {
   CarouselIndicators,
   CarouselCaption,
 } from 'reactstrap';
-import Card from './common/Card';
+import CardFb from './common/CardFacebook';
 
 const SliderFacebook = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -82,7 +82,7 @@ const SliderFacebook = () => {
         key={post.pub_id}
         post={post}
       >
-        <Card key={post.pub_id} post={post} session={post.session_id} />
+        <CardFb key={post.pub_id} post={post} session={post.session_id} />
         <CarouselCaption
           captionText={post.caption}
           captionHeader={post.caption}

@@ -17,10 +17,10 @@ const Slideburger = styled.ul`
     text-decoration: none;
     font-weight: 400;
     font-style: normal;
-    color: #262a2d;
+    color: #262a2d!important;
   }
   a:hover {
-    color: #fff;
+    color: #fff!important;
   }
 
   li:hover {
@@ -41,10 +41,7 @@ const Slideburger = styled.ul`
     height: 50vh;
     width: 80%;
     padding-top: 5.5rem;
-    transition: transform 0.3s ease-in-out;
-
-    li {
-      text-align: center;
+    text-align: center;
     }
     a {
       color: #fff;
@@ -63,18 +60,18 @@ const Slideburger = styled.ul`
 const RightNav = ({ open }) => {
   return (
     <Slideburger open={open}>
-      <li>
+      {/* <li>
         <Link to="/">Accueil</Link>
-      </li>
+      </li> */}
       <li>
         <Link to="/twitter">Twitter</Link>
       </li>
       <li>
         <Link to="/facebook">Facebook</Link>
       </li>
-      <li>
-        <Link to="/slider">Slider</Link>
-      </li>
+      {/* <li>
+        <Link to="/todolist">Todolist</Link>
+      </li> */}
     </Slideburger>
   );
 };
