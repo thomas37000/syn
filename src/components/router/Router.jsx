@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from '../Burger_Menu/NavBar';
-import Facebook from '../Facebook';
-import Grid from '../Grid';
+import SliderTwitter from '../Slider/SliderTwitter';
+import SliderFacebook from '../SliderFacebook';
+// import Grid from '../Grid';
 
 export default function Routter() {
   return (
@@ -11,8 +12,8 @@ export default function Routter() {
         <Navbar />
         <Switch>
           <Route exact path="/" />
-          <Route path="/twitter" component={Grid} />
-          <Route path="/facebook" component={Facebook} />
+          <Route path="/twitter" component={SliderTwitter} />
+          <Route path="/facebook" component={SliderFacebook} />
         </Switch>
       </Router>
     </div>

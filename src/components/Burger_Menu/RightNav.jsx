@@ -72,6 +72,9 @@ const RightNav = ({ open }) => {
       <li>
         <Link to="/facebook">Facebook</Link>
       </li>
+      <li>
+        <Link to="/slider">Slider</Link>
+      </li>
     </Slideburger>
   );
 };
