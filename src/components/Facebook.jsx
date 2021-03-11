@@ -14,7 +14,7 @@ const Facebook = () => {
     t: '8845c9cd48230070ac72191467ac1690',
     object: 'post',
     type: 'get',
-    network: 'instagram',
+    network: 'facebook',
     username: '',
     status: 1,
     after: '',
