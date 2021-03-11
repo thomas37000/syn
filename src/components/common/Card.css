@@ -13,7 +13,7 @@
 .cardFb {
   width: 100vw;
   height: 100vh;
-  background: var(--bgNoImgFb);
+  background: var(--bgNoImgFb)!important;
 }
 
 .cardNous {
@@ -61,7 +61,7 @@
   color: #f1f1f1;
   margin: 5rem 1rem;
   font-size: 35px;
-  text-align: left;
+  text-align: center;
 }
 
 .cardBodyWithImg {
@@ -74,11 +74,6 @@
   font-weight: bold;
   text-align: left;
 }
-/* 
-.socialLink {
-  color: yellow;
-  text-decoration: none;
-} */
 
 .userCard {
   display: flex;
@@ -109,9 +104,6 @@
   margin-top: 1rem;
 }
 
-.content {
-}
-
 .cardImg {
   margin: 0 0 0 5rem;
 }
@@ -130,4 +122,20 @@
 
 .hideImg {
   display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .cardImg {
+    margin: 0;
+  }
+  
+  .cardBodyWithImg {
+    display: block;
+    font-size: 25px;
+  }
+  .getImg {
+    display: flex;
+    width: 350px;
+    height: 300px;
+  }
 }
