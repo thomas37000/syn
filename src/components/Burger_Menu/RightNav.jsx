@@ -12,7 +12,6 @@ const Slideburger = styled.ul`
     padding: 18px 10px;
     padding: 20px;
   }
-
   a {
     text-decoration: none;
     font-weight: 400;
@@ -33,7 +32,7 @@ const Slideburger = styled.ul`
 
   @media (max-width: 768px) {
     flex-flow: column nowrap;
-    background: #262a2d;
+    background: #f1f1f1;
     position: fixed;
     transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
     top: 0;
@@ -42,9 +41,6 @@ const Slideburger = styled.ul`
     width: 80%;
     padding-top: 5.5rem;
     text-align: center;
-    }
-    a {
-      color: #fff;
     }
     .logoBurger {
       display: block;
