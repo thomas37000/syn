@@ -1,3 +1,5 @@
+image: node:15.8.0 # change to match your project's node version
+
 cache:
   paths:
     - node_modules/
