@@ -12,14 +12,8 @@ export default function Connexion() {
         <Link to="/identifiants-perdus" className="linksMdp">
           J&apos;ai perdu mes identifiants
         </Link>
-        <a
-          href="https://www.helloasso.com/associations/womenatnantes"
-          className="linksMdp2"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Je n&apos;ai pas de compte: je clique ici pour m&apos;inscrire à
-          l&apos; association sur HelloAsso
+        <a href="/" className="linksMdp2" target="_blank" rel="noreferrer">
+          Je n&apos;ai pas de compte: inscription
         </a>
       </div>
     </>
