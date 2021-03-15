@@ -22,18 +22,8 @@ const SliderFacebook = () => {
     s: 'thomas3',
     t: '8845c9cd48230070ac72191467ac1690',
     object: 'post',
-    type: 'get',
     network: 'facebook',
-    username: '',
-    status: 1,
-    after: '',
-    before: '',
-    minid: '',
-    maxid: '',
-    item_id: '',
-    order_by: 'pub_date',
-    per_page: 30,
-    page: 1,
+    per_page: 10,
   };
 
   useEffect(() => {

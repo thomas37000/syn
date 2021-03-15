@@ -22,19 +22,8 @@ const SliderTwitter = () => {
     s: 'thomas4',
     t: 'ddf1f0d7ee779ed42772231fa903a43b',
     object: 'post',
-    type: 'get',
     network: 'twitter',
-    username: '',
-    status: 1,
-    after: '',
-    before: '',
-    minid: '',
-    maxid: '',
-    item_id: '',
-    order: 'ASC',
-    order_by: 'pub_date',
-    per_page: 30,
-    page: 1,
+    per_page: 10,
   };
 
   useEffect(() => {
