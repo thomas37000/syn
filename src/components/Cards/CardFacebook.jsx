@@ -1,14 +1,15 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable no-extra-boolean-cast */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-curly-brace-presence */
 /* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './Card.css';
 
 export default function CardFb({ post }) {
   const bg = `url(${post.media_url})`;
-  // eslint-disable-next-line no-unused-vars
   const bgBefore = {
     '--before': bg,
   };
@@ -22,18 +23,11 @@ export default function CardFb({ post }) {
               <p>{post.content}</p>
             </div>
             <div className="cardImg">
-              {post ? (
-                <div className="getImg">
-                  <img src={post.media_url} alt="" />
-                </div>
-              ) : (
-                <div className="hideImg">
-                  <img src={post.media_url} alt="" />
-                </div>
-              )}
+              <div className="getImg">
+                <img src={post.media_url} alt="" />
+              </div>
             </div>
           </div>
-          <p className="card-text">{post.text}</p>
           <div className="userCard">
             <img
               className="logoUser"
@@ -58,15 +52,9 @@ export default function CardFb({ post }) {
               <p>{post.content}</p>
             </div>
             <div className="cardImg">
-              {post ? (
-                <div className="getImgFb">
-                  <img src={post.media_url} alt="" />
-                </div>
-              ) : (
-                <div className="hideImg">
-                  <img src={post.media_url} alt="" />
-                </div>
-              )}
+              <div className="hideImg">
+                <img src={post.media_url} alt="" />
+              </div>
             </div>
           </div>
           <p className="card-text">{post.text}</p>

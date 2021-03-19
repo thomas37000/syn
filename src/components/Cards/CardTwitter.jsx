@@ -12,6 +12,17 @@ export default function CardTwitter({ post }) {
     '--before': bg,
   };
 
+  const nous = `url(${post.user.name})`;
+  const avecNous = {
+    '--avecNousBg': nous,
+  };
+
+  const regex = /@\w+/g;
+  const regex2 = `url(${post.content.regex})`;
+  const spanRegex = {
+    '--Regex': regex,
+  };
+
   return (
     <>
       {!!post.media_url ? (
@@ -21,7 +32,7 @@ export default function CardTwitter({ post }) {
               <p>{post.content}</p>
             </div>
             <div className="cardImg">
-              {post ? (
+              {!!post.media_url ? (
                 <div className="getImg">
                   <img src={post.media_url} alt="" />
                 </div>
@@ -32,7 +43,6 @@ export default function CardTwitter({ post }) {
               )}
             </div>
           </div>
-          <p className="card-text">{post.text}</p>
           <div className="userCard">
             <img
               className="logoUser"
@@ -51,41 +61,63 @@ export default function CardTwitter({ post }) {
           </div>
         </div>
       ) : (
-        <div className="card">
-          <div className="cardBody">
-            <div className="content">
-              <p>{post.content}</p>
-            </div>
-            <div className="cardImg">
-              {post ? (
-                <div className="getImg">
-                  <img src={post.media_url} alt="" />
+        <>
+          {!!post.user.name === 'avecnous' ? (
+            <div className="card" style={avecNous}>
+              <div className="cardBodyNoImg">
+                <div className="content">
+                  <p>{post.content}</p>
                 </div>
-              ) : (
                 <div className="hideImg">
                   <img src={post.media_url} alt="" />
                 </div>
-              )}
+                <div className="userCard">
+                  <img
+                    className="logoUser"
+                    src={post.user.avatar_url}
+                    alt={post.user.name}
+                  />
+                  <h3 className="name">@{post.user.name}</h3>
+                </div>
+                <div className="footerCard">
+                  <h3 className="hashtag">{post.user.name}</h3>
+                  <img
+                    className="logoUser"
+                    src={post.user.avatar_url}
+                    alt={post.search}
+                  />
+                </div>
+              </div>
             </div>
-          </div>
-          <p className="card-text">{post.text}</p>
-          <div className="userCard">
-            <img
-              className="logoUser"
-              src={post.user.avatar_url}
-              alt={post.user.name}
-            />
-            <h3 className="name">@{post.user.name}</h3>
-          </div>
-          <div className="footerCard">
-            <h3 className="hashtag">{post.user.name}</h3>
-            <img
-              className="logoUser"
-              src={post.user.avatar_url}
-              alt={post.search}
-            />
-          </div>
-        </div>
+          ) : (
+            <div className="card">
+              <div className="cardBodyNoImg">
+                <div className="content">
+                  <p>{post.content}</p>
+                </div>
+                <div className="hideImg">
+                  <img src={post.media_url} alt="" />
+                </div>
+                <div className="userCard">
+                  <img
+                    className="logoUser"
+                    src={post.user.avatar_url}
+                    alt={post.user.name}
+                  />
+                  <h3 className="name">@{post.user.name}</h3>
+                </div>
+                <div className="footerCard">
+                  <h3 className="hashtag">{post.user.name}</h3>
+                  <img
+                    className="logoUser"
+                    src={post.user.avatar_url}
+                    alt={post.search}
+                  />
+                </div>
+              </div>
+            </div>
+          )}
+        </>
       )}
     </>
   );
