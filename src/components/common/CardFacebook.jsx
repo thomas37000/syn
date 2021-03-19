@@ -1,3 +1,4 @@
+/* eslint-disable no-extra-boolean-cast */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-curly-brace-presence */
 /* eslint-disable react/prop-types */
@@ -6,7 +7,6 @@ import PropTypes from 'prop-types';
 import './Card.css';
 
 export default function CardFb({ post }) {
-  const [isImg, setIsImg] = useState(true);
   const bg = `url(${post.media_url})`;
   // eslint-disable-next-line no-unused-vars
   const bgBefore = {
@@ -15,7 +15,7 @@ export default function CardFb({ post }) {
 
   return (
     <>
-      {isImg ? (
+      {!!post.media_url ? (
         <div className="cardWithImg" style={bgBefore}>
           <div className="cardBodyWithImg">
             <div className="content">
@@ -33,12 +33,7 @@ export default function CardFb({ post }) {
               )}
             </div>
           </div>
-
           <p className="card-text">{post.text}</p>
-          {/* <a href={post.pub_url} className="socialLink">
-          link
-        </a> */}
-
           <div className="userCard">
             <img
               className="logoUser"
@@ -75,9 +70,6 @@ export default function CardFb({ post }) {
             </div>
           </div>
           <p className="card-text">{post.text}</p>
-          {/* <a href={post.pub_url} className="socialLink">
-          link
-        </a> */}
           <div className="userCard">
             <img
               className="logoUser"
