@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import InputId from './Cards/InputId';
+import InputId from './InputId';
 import './Connexion.css';
 
 export default function Connexion() {
