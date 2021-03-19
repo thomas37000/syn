@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './Card.css';
 
-export default function Card({ post }) {
+export default function CardTwitter({ post }) {
   const bg = `url(${post.media_url})`;
   const bgBefore = {
     '--before': bg,
@@ -91,7 +91,7 @@ export default function Card({ post }) {
   );
 }
 
-Card.propTypes = {
+CardTwitter.propTypes = {
   post: PropTypes.shape({
     avatar_url: PropTypes.string.isRequired,
     content: PropTypes.string.isRequired,

@@ -8,7 +8,7 @@ import {
   CarouselIndicators,
   CarouselCaption,
 } from 'reactstrap';
-import CardFb from './common/CardFacebook';
+import CardFb from './Cards/CardFacebook';
 
 const SliderFacebook = () => {
   const [activeIndex, setActiveIndex] = useState(0);
